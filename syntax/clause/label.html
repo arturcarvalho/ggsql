@@ -80,9 +80,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-286b0d4f737c5af6226422bdceee2d85.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-b068bd8fbd0943443b2767a143b5203c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-c0e6253991c03487a1849754f0ab8899.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-b068bd8fbd0943443b2767a143b5203c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-44f4de344a60312d5293f682bd5af1a1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-e2f6f9421179af143e1cac5a5d2f3211.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-44f4de344a60312d5293f682bd5af1a1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="../../site_libs/quarto-contrib/iconify-3.0.0/iconify-icon.min.js"></script>
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
@@ -213,8 +213,17 @@ gradient teal.
     <ul class="dropdown-menu" aria-labelledby="nav-menu-news">    
         <li class="dropdown-header">Releases</li>
         <li>
+    <a class="dropdown-item" href="../../blog/posts/2026_04_29_ggsql_0_3_0/index.html">
+ <span class="dropdown-text">Version 0.3.0 (alpha)</span></a>
+  </li>  
+        <li>
     <a class="dropdown-item" href="https://opensource.posit.co/blog/2026-04-20_ggsql_alpha_release/">
  <span class="dropdown-text">Version 0.2.7 (alpha)</span></a>
+  </li>  
+        <li><hr class="dropdown-divider"></li>
+        <li>
+    <a class="dropdown-item" href="../../CHANGELOG.html">
+ <span class="dropdown-text">CHANGELOG</span></a>
   </li>  
     </ul>
   </li>
@@ -384,12 +393,6 @@ gradient teal.
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../syntax/layer/type/errorbar.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Errorbar</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../../syntax/layer/type/histogram.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Histogram</span></a>
   </div>
@@ -416,6 +419,12 @@ gradient teal.
   <div class="sidebar-item-container"> 
   <a href="../../syntax/layer/type/polygon.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Polygon</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../syntax/layer/type/range.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Range</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -680,7 +689,7 @@ gradient teal.
 <ul>
 <li><code>title</code>: The main title of the plot</li>
 <li><code>subtitle</code>: An additional, often longer and more descriptive, title beneath the main title</li>
-<li><code>caption</code>: A string placed below the plot, often used to add additional information about the data source etc.</li>
+<li><code>caption</code>: A string placed below the plot, often used to add additional information about the data source etc. Currently not possible as our only writer (Vega-Lite) doesn’t support it. Will be available as new writers appear.</li>
 </ul>
 </section>
 <section id="automatic-labelling-logic" class="level2">

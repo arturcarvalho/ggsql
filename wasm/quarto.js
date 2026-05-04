@@ -292452,7 +292452,7 @@ async function _embed(el, spec, opts = {}, loader2) {
   return { view, spec, vgSpec, finalize: finalize2, embedOptions: opts };
 }
 
-// ../pkg/snippets/ggsql-wasm-3dd2d89ecaa2feb4/library/dist/lib.js
+// ../pkg/snippets/ggsql-wasm-ba9ba8aa7eb18b40/library/dist/lib.js
 function convert_csv(bytes) {
   const text4 = new TextDecoder().decode(bytes);
   const lines = parseCSVLines(text4);
@@ -295190,13 +295190,13 @@ function __wbg_get_imports() {
         return addHeapObject(ret);
       }, arguments);
     },
-    __wbg_convert_csv_04f2d9050a7f1f9d: function() {
+    __wbg_convert_csv_0a6d4e89533f7db0: function() {
       return handleError(function(arg0, arg1) {
         const ret = convert_csv(getArrayU8FromWasm0(arg0, arg1));
         return addHeapObject(ret);
       }, arguments);
     },
-    __wbg_convert_parquet_79a152947f01c3c2: function() {
+    __wbg_convert_parquet_e448c0f02c4a0570: function() {
       return handleError(function(arg0, arg1) {
         const ret = convert_parquet(getArrayU8FromWasm0(arg0, arg1));
         return addHeapObject(ret);
@@ -295314,7 +295314,7 @@ function __wbg_get_imports() {
           const a3 = state0.a;
           state0.a = 0;
           try {
-            return __wasm_bindgen_func_elem_7463(a3, state0.b, arg02, arg12);
+            return __wasm_bindgen_func_elem_7465(a3, state0.b, arg02, arg12);
           } finally {
             state0.a = a3;
           }
@@ -295410,7 +295410,7 @@ function __wbg_get_imports() {
       return addHeapObject(ret);
     },
     __wbindgen_cast_0000000000000001: function(arg0, arg1) {
-      const ret = makeMutClosure(arg0, arg1, __wasm_bindgen_func_elem_7399);
+      const ret = makeMutClosure(arg0, arg1, __wasm_bindgen_func_elem_7401);
       return addHeapObject(ret);
     },
     __wbindgen_cast_0000000000000002: function(arg0) {
@@ -295438,10 +295438,10 @@ function __wbg_get_imports() {
     "./ggsql_wasm_bg.js": import0
   };
 }
-function __wasm_bindgen_func_elem_7399(arg0, arg1, arg2) {
+function __wasm_bindgen_func_elem_7401(arg0, arg1, arg2) {
   try {
     const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
-    wasm.__wasm_bindgen_func_elem_7399(retptr, arg0, arg1, addHeapObject(arg2));
+    wasm.__wasm_bindgen_func_elem_7401(retptr, arg0, arg1, addHeapObject(arg2));
     var r0 = getDataViewMemory0().getInt32(retptr + 4 * 0, true);
     var r1 = getDataViewMemory0().getInt32(retptr + 4 * 1, true);
     if (r1) {
@@ -295451,8 +295451,8 @@ function __wasm_bindgen_func_elem_7399(arg0, arg1, arg2) {
     wasm.__wbindgen_add_to_stack_pointer(16);
   }
 }
-function __wasm_bindgen_func_elem_7463(arg0, arg1, arg2, arg3) {
-  wasm.__wasm_bindgen_func_elem_7463(arg0, arg1, addHeapObject(arg2), addHeapObject(arg3));
+function __wasm_bindgen_func_elem_7465(arg0, arg1, arg2, arg3) {
+  wasm.__wasm_bindgen_func_elem_7465(arg0, arg1, addHeapObject(arg2), addHeapObject(arg3));
 }
 var GgsqlContextFinalization = typeof FinalizationRegistry === "undefined" ? { register: () => {
 }, unregister: () => {
@@ -298679,7 +298679,7 @@ var GEOM_LINKS = {
   segment: { url: "syntax/layer/type/segment", label: "segment layer" },
   rule: { url: "syntax/layer/type/rule", label: "rule layer" },
   linear: { url: "syntax/layer/type/linear", label: "linear layer" },
-  errorbar: { url: "syntax/layer/type/errorbar", label: "errorbar layer" }
+  range: { url: "syntax/layer/type/range", label: "range layer" }
 };
 var COORD_LINKS = {
   cartesian: { url: "syntax/coord/cartesian", label: "cartesian coordinates" },
@@ -298763,7 +298763,7 @@ var POSITION_LINKS = {
   }
 };
 var CLAUSE_RE = /\b(VISUALISE|VISUALIZE|DRAW|PLACE|SCALE|FACET|PROJECT|LABEL)\b/gi;
-var GEOM_RE = /\b(?:DRAW|PLACE)\s+(point|line|path|bar|area|tile|polygon|ribbon|histogram|density|smooth|boxplot|violin|text|segment|rule|linear|errorbar)\b/gi;
+var GEOM_RE = /\b(?:DRAW|PLACE)\s+(point|line|path|bar|area|tile|polygon|ribbon|histogram|density|smooth|boxplot|violin|text|segment|rule|linear|range)\b/gi;
 var COORD_RE = /\bTO\s+(cartesian|polar)\b/gi;
 var SCALE_TYPE_RE = /\bSCALE\s+(CONTINUOUS|DISCRETE|BINNED|ORDINAL|IDENTITY)\b/gi;
 var AESTHETIC_AFTER_AS_RE = /\bAS\s+(x|y|xmin|xmax|ymin|ymax|xend|yend|color|colour|fill|stroke|opacity|size|shape|linetype|linewidth|panel|row|column)\b/gi;
