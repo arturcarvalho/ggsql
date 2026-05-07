@@ -244,20 +244,25 @@ gradient teal.
   <ul>
   <li><a href="#unreleased" id="toc-unreleased" class="nav-link active" data-scroll-target="#unreleased">[Unreleased]</a>
   <ul class="collapse">
-  <li><a href="#fixed" id="toc-fixed" class="nav-link" data-scroll-target="#fixed">Fixed</a></li>
+  <li><a href="#added" id="toc-added" class="nav-link" data-scroll-target="#added">Added</a></li>
   </ul></li>
-  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section">0.3.1 - 2026-04-30</a>
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section">0.3.2 - 2026-05-05</a>
+  <ul class="collapse">
+  <li><a href="#fixed" id="toc-fixed" class="nav-link" data-scroll-target="#fixed">Fixed</a></li>
+  <li><a href="#changed" id="toc-changed" class="nav-link" data-scroll-target="#changed">Changed</a></li>
+  </ul></li>
+  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1">0.3.1 - 2026-04-30</a>
   <ul class="collapse">
   <li><a href="#fixed-1" id="toc-fixed-1" class="nav-link" data-scroll-target="#fixed-1">Fixed</a></li>
   </ul></li>
-  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1">0.3.0 - 2026-04-29</a>
+  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2">0.3.0 - 2026-04-29</a>
   <ul class="collapse">
-  <li><a href="#added" id="toc-added" class="nav-link" data-scroll-target="#added">Added</a></li>
+  <li><a href="#added-1" id="toc-added-1" class="nav-link" data-scroll-target="#added-1">Added</a></li>
   <li><a href="#fixed-2" id="toc-fixed-2" class="nav-link" data-scroll-target="#fixed-2">Fixed</a></li>
-  <li><a href="#changed" id="toc-changed" class="nav-link" data-scroll-target="#changed">Changed</a></li>
+  <li><a href="#changed-1" id="toc-changed-1" class="nav-link" data-scroll-target="#changed-1">Changed</a></li>
   <li><a href="#removed" id="toc-removed" class="nav-link" data-scroll-target="#removed">Removed</a></li>
   </ul></li>
-  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2">[2.7.0] - 2026-04-20</a></li>
+  <li><a href="#section-3" id="toc-section-3" class="nav-link" data-scroll-target="#section-3">[2.7.0] - 2026-04-20</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/posit-dev/ggsql/issues" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -269,15 +274,33 @@ gradient teal.
 
 <section id="unreleased" class="level2">
 <h2 class="anchored" data-anchor-id="unreleased">[Unreleased]</h2>
-<section id="fixed" class="level3">
-<h3 class="anchored" data-anchor-id="fixed">Fixed</h3>
+<section id="added" class="level3">
+<h3 class="anchored" data-anchor-id="added">Added</h3>
 <ul>
-<li>Fixed bug where panel axes were unintentionally anchored to zero when using <code>FACET ... SETTING free =&gt; 'x'/'y'</code> (#410).</li>
+<li>Added panel decorations (grid lines, axes, background) for polar coordinates (#156).</li>
+<li>Added <code>radar</code> setting to polar coordinates for making radar plots (#418).</li>
 </ul>
 </section>
 </section>
 <section id="section" class="level2">
-<h2 class="anchored" data-anchor-id="section">0.3.1 - 2026-04-30</h2>
+<h2 class="anchored" data-anchor-id="section">0.3.2 - 2026-05-05</h2>
+<section id="fixed" class="level3">
+<h3 class="anchored" data-anchor-id="fixed">Fixed</h3>
+<ul>
+<li>Side effects like <code>CREATE TEMP TABLE</code> before the <code>VISUALISE</code> statement are now separated from directly feeding into the visualisation data (#415)</li>
+<li>Fixed bug where panel axes were unintentionally anchored to zero when using <code>FACET ... SETTING free =&gt; 'x'/'y'</code> (#410).</li>
+<li>Fixed bug where faceted data were matched to the incorrect panels (#409)</li>
+</ul>
+</section>
+<section id="changed" class="level3">
+<h3 class="anchored" data-anchor-id="changed">Changed</h3>
+<ul>
+<li>Restructured how ggsql integrates with ODBC drivers to use the system ODBC, rather than bundling unixodbc as part of binary releases. This fixes several issues on Linux and macOS caused by relative paths to dynamic libraries.</li>
+</ul>
+</section>
+</section>
+<section id="section-1" class="level2">
+<h2 class="anchored" data-anchor-id="section-1">0.3.1 - 2026-04-30</h2>
 <section id="fixed-1" class="level3">
 <h3 class="anchored" data-anchor-id="fixed-1">Fixed</h3>
 <ul>
@@ -285,10 +308,10 @@ gradient teal.
 </ul>
 </section>
 </section>
-<section id="section-1" class="level2">
-<h2 class="anchored" data-anchor-id="section-1">0.3.0 - 2026-04-29</h2>
-<section id="added" class="level3">
-<h3 class="anchored" data-anchor-id="added">Added</h3>
+<section id="section-2" class="level2">
+<h2 class="anchored" data-anchor-id="section-2">0.3.0 - 2026-04-29</h2>
+<section id="added-1" class="level3">
+<h3 class="anchored" data-anchor-id="added-1">Added</h3>
 <ul>
 <li>Add cell delimiters and code lens actions to the Positron extension (#366)</li>
 <li>ODBC is now turned on for the CLI as well (#344)</li>
@@ -312,8 +335,8 @@ gradient teal.
 <li>Fixed an issue with OOB null-filtering, leading to missing median lines in boxplots (#394)</li>
 </ul>
 </section>
-<section id="changed" class="level3">
-<h3 class="anchored" data-anchor-id="changed">Changed</h3>
+<section id="changed-1" class="level3">
+<h3 class="anchored" data-anchor-id="changed-1">Changed</h3>
 <ul>
 <li>Reverted an earlier decision to materialize CTEs and the global query in Rust before registering them back to the backend. We now keep the data purely on the backend until the layer query as was always intended (#363)</li>
 <li>Relieved some grammatical constraints on the SQL-portion before the VISUALISE portion (#364).</li>
@@ -333,8 +356,8 @@ gradient teal.
 </ul>
 </section>
 </section>
-<section id="section-2" class="level2">
-<h2 class="anchored" data-anchor-id="section-2">[2.7.0] - 2026-04-20</h2>
+<section id="section-3" class="level2">
+<h2 class="anchored" data-anchor-id="section-3">[2.7.0] - 2026-04-20</h2>
 <ul>
 <li>First alpha release. No changes tracked before this</li>
 </ul>
